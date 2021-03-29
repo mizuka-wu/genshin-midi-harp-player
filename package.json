@@ -1,0 +1,26 @@
+{
+  "name": "midi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx pkg -t win index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "midi-player-js": "^2.0.13",
+    "node-countdown": "^0.1.0",
+    "robotjs": "^0.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.23.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1",
+    "pkg": "^4.5.1"
+  }
+}
