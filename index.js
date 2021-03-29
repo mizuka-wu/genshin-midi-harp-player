@@ -38,14 +38,11 @@ const filePath = path.join(__dirname, 'data.mid')
 if (fs.existsSync(filePath)) {
 // Load a MIDI file
   Player.loadFile(filePath)
-  countdown.start(5000, { suffix: '后开始备份' }, function (err) {
+  countdown.start(5000, { suffix: '后开始模拟按键，请打开游戏' }, function (err) {
     err
       ? console.log(err.message)
-      : console.log('开始备份...')
+      : Player.play()
   })
-// setTimeout(() => {
-//     Player.play()
-// }, 3000)
 } else {
   console.log('请在当前目录放置data.mid')
 }
