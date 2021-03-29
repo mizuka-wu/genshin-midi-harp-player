@@ -32,12 +32,6 @@ jobs:
       - name: build
         run: npm run build
 
-      - name: Archive Release
-        uses: thedoctor0/zip-release@master
-        with:
-          filename: "release.zip"
-          exclusions: "*.git* /*node_modules/* .editorconfig"
-
       - name: Create Draft Release
         id: create_release
         uses: actions/create-release@v1
@@ -54,6 +48,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./release.zip
-          asset_name: release.zip
+          asset_path: ./
+          asset_name: hell
           asset_content_type: application/zip
