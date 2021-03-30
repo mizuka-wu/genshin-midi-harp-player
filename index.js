@@ -7,7 +7,7 @@ const path = require('path')
 const countdown = require('node-countdown')
 
 const KEYBOARD_NOTENUMBER = JSON.parse(fs.readFileSync(
-  path.join(__dirname, 'keyboard.json')
+  path.join('.', 'keyboard.json')
   , 'utf-8'))
 
 /**
@@ -33,7 +33,7 @@ const Player = new MidiPlayer.Player(function ({ noteNumber, noteName }) {
   }
 })
 
-const filePath = path.join(__dirname, 'data.mid')
+const filePath = path.join('.', 'data.mid')
 
 if (fs.existsSync(filePath)) {
 // Load a MIDI file
@@ -44,5 +44,5 @@ if (fs.existsSync(filePath)) {
       : Player.play()
   })
 } else {
-  console.log('请在当前目录放置data.mid')
+  console.log('请在当前目录放置data.mid', filePath)
 }
