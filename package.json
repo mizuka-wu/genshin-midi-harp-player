@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npx pkg -t win index.js",
+    "package": "node package.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -13,6 +14,7 @@
     "lodash": "^4.17.21",
     "midi-player-js": "^2.0.13",
     "node-countdown": "^0.1.0",
+    "node-zip": "^1.1.1",
     "robotjs": "^0.6.0"
   },
   "devDependencies": {

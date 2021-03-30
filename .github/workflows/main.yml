@@ -30,6 +30,9 @@ jobs:
       - name: build
         run: npm run build
 
+      - name: package
+        run: npm run package
+
       - name: Create Draft Release
         id: create_release
         uses: actions/create-release@v1
@@ -46,15 +49,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./index.exe
-          asset_name: index.exe
-          asset_content_type: application/zip
-
-      - uses: actions/upload-release-asset@v1.0.1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./keyboard.json
-          asset_name: keyboard.json
+          asset_path: ./player.zip
+          asset_name: player.zip
           asset_content_type: application/zip
