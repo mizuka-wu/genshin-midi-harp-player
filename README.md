@@ -12,19 +12,20 @@
 ## 使用方法
 
 ### exe
+
 因为打包了`node`所以比较大
 
 1. 下载你要演奏的乐曲的`mid`文件并重命名为`data.mid`
-2. 下载`index.exe`和`keyboard.json`
-3. 将三者放在同一目录下
+2. 下载`playe.zip`并解压
+3. 将`data.mid`和`player.zip`解压出的文件放在一起
 4. 以管理员模式运行`exe`
 
 ### 源码
+
 1. 下载本项目
 2. `npm ci`
 3. 下载你要演奏的乐曲的`mid`文件并重命名为`data.mid`到项目目录
 4. `powershell`以管理员模式运行`node index.js`
-
 
 `5s`后自动开始模拟按键，请将游戏打开演奏页面
 
