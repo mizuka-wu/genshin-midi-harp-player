@@ -27,7 +27,7 @@ const Player = new MidiPlayer.Player(function ({ noteName }) {
   if (key) {
     pressKey(key)
     console.log('按下：', noteName, key)
-  } else {
+  } else if (noteName) {
     console.log('未找到对应按键：', noteName)
   }
 })
