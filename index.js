@@ -11,10 +11,10 @@ const KEYBOARD_NOTENUMBER = JSON.parse(fs.readFileSync(
   , 'utf-8'))
 
 /**
- * 按键
+ * 按键/支持按多个
  */
-const pressKey = throttle(function (key) {
-  robot.keyTap(key)
+const pressKey = throttle(function (keys) {
+  keys.split('').forEach(key => robot.keyTap(key))
 }, 50)
 
 const Player = new MidiPlayer.Player(function ({ noteNumber, noteName }) {
