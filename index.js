@@ -6,6 +6,8 @@ const fs = require('fs')
 const path = require('path')
 const countdown = require('node-countdown')
 
+robot.setKeyboardDelay(1)
+
 const KEY_TOGGLE = {
   DOWN: 'down',
   UP: 'up'
