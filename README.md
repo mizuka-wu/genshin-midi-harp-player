@@ -4,6 +4,12 @@
 
 一些`midi`可以从[这个连接](https://www.midiclouds.com/forum-1-1.html)下载
 
+## 关于琴谱
+
+因为原神限制，所以能够演奏的音只有`21`个，推荐使用卡林巴琴的曲谱来生成`midi`文件
+
+[mp3 转 midi](https://evano.com/audio/mp3-to-midi-online-converter)
+
 ## 依赖
 
 - midi-player-js
