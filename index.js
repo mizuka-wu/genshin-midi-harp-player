@@ -6,6 +6,11 @@ const fs = require('fs')
 const path = require('path')
 const countdown = require('node-countdown')
 
+const KEY_TOGGLE = {
+  DOWN: 'down',
+  UP: 'up'
+}
+
 const KEYBOARD_NOTENUMBER = JSON.parse(fs.readFileSync(
   path.join('.', 'keyboard.json')
   , 'utf-8'))
@@ -14,7 +19,9 @@ const KEYBOARD_NOTENUMBER = JSON.parse(fs.readFileSync(
  * 按键/支持按多个
  */
 const pressKey = function (keys) {
-  keys.split('').forEach(key => robot.keyTap(key))
+  const list = keys.split('')
+  list.forEach(key => robot.keyToggle(key, KEY_TOGGLE.DOWN))
+  list.forEach(key => robot.keyToggle(key, KEY_TOGGLE.UP))
 }
 
 const Player = new MidiPlayer.Player(function ({ noteName }) {
